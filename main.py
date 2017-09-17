@@ -25,6 +25,8 @@ if_main()
 
 james = person.person(name)
 
-ak = gun.gun
+ak = gun.gun()
 
-ak.pickUp(james.name)
+ak.pickUp(james)
+
+
