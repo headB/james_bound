@@ -25,8 +25,16 @@ if_main()
 
 james = person.person(name)
 
-ak = gun.gun()
+ak = gun.gun('USA-M4')
 
-ak.pickUp(james)
+#pperson类里面添加了__str__,一旦其他程序调用的时候，自动返回相应的类型数据
+#ak.pickUp(james)
 
+#打印拿着AK47这个人的信息（名字）
+#(ak.personName)
 
+#打印看看james实例是否已经被赋予了枪支
+
+#print(james.gun)
+
+james.pickUp(ak)
