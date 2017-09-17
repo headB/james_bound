@@ -1,16 +1,30 @@
 ##首先定义一个人先
 import sys
-class person:
-      ##获取参数，例如是名字，年龄
-      def __init__(self):
-          var =  sys.argv
-          if var[1]:
-              print("你的特工名字叫%s" %(var[1]))
+import person
+import gun
+##获取参数，例如是名字，年龄
+name = ''
+def if_main():
 
-          else:
-              print("你默认的名字就叫做占士邦")
-      def name(self):
-          print('xx')
+    if  __name__ == "__main__":
+        pass
+    else:
+        print("不是主调用")
+        exit()
 
+    global name
+    var =  sys.argv
+    num = len(var)
+    if num < 2:
+        name = "james bound"
+    else:
+        name = var[1]
 
-james = person()
+#调用主函数
+if_main()
+
+james = person.person(name)
+
+ak = gun.gun
+
+ak.pickUp(james.name)
