@@ -2,15 +2,17 @@
 class gun:
     def __init__(self,gun="AK47"):
         self.gunName = gun
-        self.ammo = None
+        self.danJia = None
 
-    def ammo(self,gunAmmo):
-
-        self.ammo += gunAmmo
+    def load(self,danJia):
+        self.danJia = danJia
 
     def printTest(self,name):
 
         self.personName = name
+
+    def __str__(self):
+        return self.danjia
 
     def setPersonGun(self,who):
         who.gun = self.gunName
@@ -21,7 +23,17 @@ class gun:
 
 ##弹夹，这个可以为抢补充弹药
 class danjia:
-    def __init__(self):
+    def __init__(self,number):
         self.ammoNum = None
+        #设置一个变量储存子弹数量
+        self.ammo(number)
+
     def ammo(self,number):
-        self.ammoNum = number
+        if self.ammoNum:
+           self.ammoNum += number
+        else:
+           self.ammoNum = number
+
+    def __str__(self):
+        return self.ammoNum
+

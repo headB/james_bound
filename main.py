@@ -23,13 +23,21 @@ def if_main():
 #调用主函数
 if_main()
 
+#创建人物-占士邦-james-bound
 james = person.person(name)
 
-ak = gun.gun('USA-M4')
 
-danJia = gun.danjia()
 
-danJia.ammo(100)
+#danJia = gun.danjia()
+
+##创建子弹，给予一定的子弹数量
+danjia = gun.danjia(100)
+
+#创建枪
+m4 = gun.gun('USA-M4')
+
+##人去让将枪和弹夹组合
+james.loadAmmo(m4,danjia)
 
 #pperson类里面添加了__str__,一旦其他程序调用的时候，自动返回相应的类型数据
 #ak.pickUp(james)
@@ -41,18 +49,18 @@ danJia.ammo(100)
 
 #print(james.gun)
 
-james.pickUp(ak,danJia)
+##然后人再去捡起枪去用（哪一支都可以啦）
+james.pickUp(m4)
 
-james.trick(ak)
+print(james.gun.gunName)
 
-james.info()
 
-james.trick(ak)
+james.trick()
+
+james.trick()
 
 print("中途开挂，加弹药")
 
-danJia.ammo(50)
+danjia.ammo(50)
 
-james.pickUp(ak,danJia)
-
-james.trick(ak)
+james.trick()
