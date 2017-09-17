@@ -7,9 +7,14 @@ class person:
     def __str__(self):
         return self.name
 
-    def pickUp(self,gun):
+    def pickUp(self,gun,danJia):
         self.gun = gun.gunName
+        gun.ammo = danJia.ammoNum
         print("the gun name is %s" %(gun.gunName))
+
+    def trick(self,objectGun):
+        objectGun.ammo-=2
+        print("现在剩下的弹量是%d"%(objectGun.ammo))
 
     def info(self):
 

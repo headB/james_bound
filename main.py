@@ -27,6 +27,10 @@ james = person.person(name)
 
 ak = gun.gun('USA-M4')
 
+danJia = gun.danjia()
+
+danJia.ammo(100)
+
 #pperson类里面添加了__str__,一旦其他程序调用的时候，自动返回相应的类型数据
 #ak.pickUp(james)
 
@@ -37,6 +41,18 @@ ak = gun.gun('USA-M4')
 
 #print(james.gun)
 
-james.pickUp(ak)
+james.pickUp(ak,danJia)
+
+james.trick(ak)
 
 james.info()
+
+james.trick(ak)
+
+print("中途开挂，加弹药")
+
+danJia.ammo(50)
+
+james.pickUp(ak,danJia)
+
+james.trick(ak)
