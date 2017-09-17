@@ -1,8 +1,8 @@
 ##枪的类
 class gun:
     def __init__(self,gun="AK47"):
-       self.gunName = gun
-       self.personName = ''
+        self.gunName = gun
+        self.ammo = 50
 
 
     def printTest(self,name):

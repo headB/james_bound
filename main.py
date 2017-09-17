@@ -38,3 +38,5 @@ ak = gun.gun('USA-M4')
 #print(james.gun)
 
 james.pickUp(ak)
+
+james.info()
